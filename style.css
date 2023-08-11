@@ -1,0 +1,181 @@
+:root {
+  --color-primary: #1677ff;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray: #666;
+  --color-lightgray: #ccc;
+  --color-light-primary: #1677ff64;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  text-decoration: none;
+}
+
+nav {
+  border: 2px dashed var(--color-primary);
+  /* 框架设置 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+nav div.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: smaller;
+  font-weight: 700;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+nav div.logo svg {
+  width: 20px;
+  aspect-ratio: 1/1;
+}
+
+
+
+/*  */
+/*  */
+nav div.logo img {
+  width: 25px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+nav div.search {
+  background-color: var(--color-lightgray);
+  border-radius: 20px;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid var(--color-lightgray);
+  margin-right: 140px;
+  /* flex: 1; */
+}
+
+nav div.search i {
+  cursor: pointer;
+  font-size: 16px;
+
+}
+
+nav div.search input[type="text"] {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+nav div.search input[type="text"]::placeholder {
+  color: var(--color-gray);
+  font-style: italic;
+}
+
+nav div.link-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  /* text-align: right; */
+}
+
+.link-group a:last-child i {
+  display: none;
+}
+
+nav div.link-group>* {
+  color: var(--color-gray);
+  /* border: 2px solid var(--color-primary); */
+  padding: 2px 5px;
+  border-radius: 30px;
+
+}
+
+nav div.link-group i {
+  font-size: larger;
+  /* display: none; */
+  color: #FF3F3F;
+
+
+}
+
+.link-group a:last-of-type+i {
+  display: none;
+}
+
+nav div.logo2 i {
+
+  display: none;
+  /* visibility: hidden; */
+}
+
+@media (width <=700px) {
+  :root {
+    font-size: 10px;
+  }
+
+  nav div.search {
+    margin-right: 0px;
+  }
+
+  nav div.link-group {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+  }
+}
+
+@media (width <=550px) {
+  nav div.logo span {
+    display: none;
+  }
+
+  nav div.search {
+    margin-right: 0px;
+  }
+
+  nav div.link-group>* {
+    display: none;
+  }
+
+  nav div.link-group i {
+    display: block;
+    font-size: 16px;
+  }
+
+  nav div.logo2 i {
+    display: flex;
+    font-size: 20px;
+    color: #FF3F3F;
+  }
+
+  .link-group a:last-of-type+i {
+    display: flex;
+    font-size: large;
+    cursor: pointer;
+    color: rgba(9, 162, 250, 0.662);
+  }
+
+  /* .link-group a:last-child i {
+    display: flex;
+    font-size: 20px;
+    color: #FF3F3F;
+  } */
+
+}
